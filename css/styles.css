@@ -1,15 +1,17 @@
 :root {
-  /* --primary-text-color: #212121; */
+  --primary-text-color: #212121;
   --secondary-text-color: #757575;
   --color-accent: #2196f3;
   --color-light: #ffffff;
   --color-bg-dark: #2f303a;
-  --color-mid: #f5f4fa;
+  --color-bg-primary: #f2f2f2;
+  --color-bg-secondary: #f5f4fa;
 }
+
 body {
-  color: #212121;
   font-family: Roboto, "Open Sans", sans-serif;
 }
+
 /* -----HEADER----- */
 /* --logo-- */
 .header {
@@ -31,16 +33,17 @@ body {
 }
 
 /* --nav--*/
-.nav-list {
+.list {
+  list-style: none;
+}
+.nav-item {
+  text-decoration: none;
+  color: var(--primary-text-color);
   list-style: none;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-.nav-item {
-  text-decoration: none;
-  color: #212121;
 }
 .nav-item:hover,
 .nav-item:focus {
@@ -49,16 +52,13 @@ body {
 .nav-item.current {
   color: var(--color-accent);
 }
-.contacts {
-  list-style: none;
+.contacts-item {
+  text-decoration: none;
+  color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
-.contacts-item {
-  text-decoration: none;
-  color: var(--secondary-text-color);
 }
 .contacts-item:hover,
 .contacts-item:focus {
@@ -70,7 +70,7 @@ body {
   background-color: var(--color-bg-dark);
 }
 .hero {
-  color: #ffffff;
+  color: var(--color-light);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -79,7 +79,7 @@ body {
 }
 .main-button {
   background-color: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-light);
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -87,18 +87,22 @@ body {
   letter-spacing: 0.06em;
   cursor: pointer;
 }
+
 .main-button:hover,
 .main-button:focus {
-  background-color: #ffffff;
+  background-color: var(--color-bg-primary);
   color: var(--color-accent);
 }
 
 /* --Aabout us--- */
-/* --advantages-- */
-.list {
-  list-style: none;
+.advantages,
+.activities {
+  background-color: var(--color-light);
 }
+
+/* --advantages-- */
 .advantages-item {
+  color: var(--primary-text-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -111,19 +115,22 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+
 /* --activities-- */
 .activity-title {
+  color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
-
   letter-spacing: 0.03em;
 }
+
 /* --our team-- */
 .team {
-  background-color: var(--color-mid);
+  background-color: var(--color-bg-secondary);
 }
 .team-title {
+  color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17px;
@@ -141,6 +148,7 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
 }
+
 /* ------FOOTER------ */
 .footer {
   background-color: var(--color-bg-dark);
@@ -155,35 +163,35 @@ body {
 .studio-white {
   color: var(--color-light);
 }
-.address-list {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-}
 .address-item {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 .address-item.street {
   color: var(--color-light);
 }
 .street:hover,
 .street:focus {
-  color: var(--color-accent);
+  color: var(--secondary-text-color);
 }
 .email:hover,
 .email:focus {
-  color: var(--color-accent);
+  color: var(--color-light);
 }
 .tel:hover,
 .tel:focus {
-  color: var(--color-accent);
+  color: var(--color-light);
 }
+
 /* ----------PORTFOLIO.HTML---------- */
 
 .button {
   background: var(--color-mid);
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
@@ -197,7 +205,12 @@ body {
 .button:focus {
   color: var(--color-accent);
 }
+.card {
+  text-decoration: none;
+}
 .card-title {
+  color: var(--primary-text-color);
+  font-family: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
